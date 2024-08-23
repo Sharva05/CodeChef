@@ -1,5 +1,7 @@
 #include <bits/stdc++.h>
+
 using namespace std;
+
 
 int main() {
     int t;
@@ -12,11 +14,8 @@ int main() {
         for(int i=0;i<n;i++){
             cin>>a[i];
             sum+=a[i];
-            if(a[i]<=y)
-               a[i]=0;
-            else
-               a[i]-=y;
-            dsum+=a[i];
+            if(a[i]>y)
+              dsum+=a[i]-y;
         }
         if((sum-x)<=dsum)
            cout<<"NO COUPON"<<endl;
